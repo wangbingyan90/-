@@ -1,6 +1,7 @@
 package com.wangby.www.t;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -27,11 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE2 = 7;
     private File output;
     private Uri imageUri;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = this;
         initView();
     }
 
@@ -67,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
             choosePhoto();
         }
     }
+
+
+
+
+
+
 
     /**
      * 拍照
